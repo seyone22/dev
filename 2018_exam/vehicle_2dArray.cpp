@@ -52,11 +52,36 @@ int main()
         }
         else if (selection == 2)
         {
-            cout << "You've selected " << opt[1] << endl;
-            cout << "\tThe total number of Vans are: " << vehicle[0][0] + vehicle[1][0] + vehicle[2][0] << endl;
-            cout << "\tThe total number of Cars are: " << vehicle[0][1] + vehicle[1][1] + vehicle[2][1] << endl;
-            cout << "\tThe total number of Cabs are: " << vehicle[0][2] + vehicle[1][2] + vehicle[2][2] << endl;
-            cout << "\tThe total number of Motor Bikes are: " << vehicle[0][3] + vehicle[1][3] + vehicle[2][3] << endl;
+            for (int vehicleType = 0, columnTotal = 0; vehicleType < 4; vehicleType++)
+            {
+                columnTotal = 0; //resets the column total at the beginning of every loop so that it doesn't give a cumulative value
+                for (int increment = 0; increment < 3; increment++)
+                {
+                    columnTotal = columnTotal + vehicle[increment][vehicleType];
+                }
+                switch (vehicleType)
+                {
+                case 0:
+                    cout << "\tThe total number of Vans"
+                         << " is: " << columnTotal << endl;
+                    break;
+                case 1:
+
+                    cout << "\tThe total number of Cars"
+                         << " is: " << columnTotal << endl;
+                    break;
+                case 2:
+
+                    cout << "\tThe total number of Cabs"
+                         << " is: " << columnTotal << endl;
+                    break;
+                case 3:
+
+                    cout << "\tThe total number of Motor Bikes"
+                         << " is: " << columnTotal << endl;
+                    break;
+                }
+            }
             cout << exitMsg;
         }
         else if (selection == 3)
