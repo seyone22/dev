@@ -1,0 +1,89 @@
+//this program has been rewritten to include 2d arrays to store data. Question: Why use 2d arrays over just regular arrays, or even individual variables? Space savings? Calculation time reduction?
+//My guess would be space savings...
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int selection = 0;
+    string exitMsg;
+    string opt[3]{"The total number of vehicles in each parking lot", "The total number of vehicles of each type", "The total number of vehicles in all the parking lots and of all vehicle types"};
+    exitMsg = "\nPlease enter another number to make another selection, or 4 to close the application.\n"; //Finally realized the usefulness of home and end on keyboard. Glad my RK68 will have it!
+
+    /*  int van[3]{13, 10, 8};
+    int car[3]{9, 18, 20};
+    int cab[3]{10, 20, 15};
+    int moBike[3]{32, 34, 40};
+*/
+
+    //declaration of the same data above, but using a 2d matrix array. Apparantly you can make any dimension of arrays... How it works beyond 3 is beyond me... Beyond physics I'd say!
+    int fullTotal = 0;
+    int vehicle[3][4]{
+        //OI OI IT'S COLUMN FIRST, THEN ROW. DON'T SCREW THIS UP!!!
+        {13, 9, 10, 32},  //Row 0, AKA lot 1
+        {10, 18, 20, 34}, //Row 1, AKA lot 2
+        {8, 20, 15, 40},  //Row 2, AKA lot 3
+    };
+
+    cout << "This program will display the vehicle slots taken up within the multi-lot parking facility. Please make a selection by typing in the relevant number. \nPLEASE DON'T ENTER ANYTHING OTHER THAN POSITIVE WHOLE NUMBERS, THE PROGRAM BUGS.\n"
+         << endl
+         << "\t1.\t" << opt[0] << endl
+         << "\t2.\t" << opt[1] << endl
+         << "\t3.\t" << opt[2] << endl
+         << "\t4.\tExit" << endl;
+
+    do
+    {
+        cin >> selection;
+        if (selection == 1)
+        {
+            cout << "You've selected " << opt[0] << endl;
+            for (int x = 0, countTotal = 0; x < 3; ++x)
+            {
+                countTotal = 0;
+                for (int y = 0; y < 4; ++y)
+                {
+                    countTotal = countTotal + vehicle[x][y];
+                }
+                cout << "\tThe total number of vehicles in lot " << x + 1 << " is: " << countTotal << endl;
+            }
+            cout << exitMsg;
+        }
+        else if (selection == 2)
+        {
+            cout << "You've selected " << opt[1] << endl;
+            cout << "\tThe total number of Vans are: " << vehicle[0][0] + vehicle[1][0] + vehicle[2][0] << endl;
+            cout << "\tThe total number of Cars are: " << vehicle[0][1] + vehicle[1][1] + vehicle[2][1] << endl;
+            cout << "\tThe total number of Cabs are: " << vehicle[0][2] + vehicle[1][2] + vehicle[2][2] << endl;
+            cout << "\tThe total number of Motor Bikes are: " << vehicle[0][3] + vehicle[1][3] + vehicle[2][3] << endl;
+            cout << exitMsg;
+        }
+        else if (selection == 3)
+        {
+            cout << "You've selected " << opt[2] << endl;
+            cout << "\tThe grand total number of vehicles of all types is ";
+            for (int x = 0, rowTotal = 0; x < 3; ++x)
+            {
+                rowTotal = 0;
+                for (int y = 0; y < 4; ++y)
+                {
+                    rowTotal = rowTotal + vehicle[x][y];
+                }
+                fullTotal = fullTotal + rowTotal;
+            }
+            cout << fullTotal << endl; //If I put the cout statement inside the for loop, it gives the cumulative values of rows 1, 1 and 2, 1 and 2 and 3. How can I carry over the fullTotal value outside?
+            // fixed by not declaring fulltotal inside the for loop, and only declaring it at the top.
+            cout << exitMsg;
+        }
+        else if (selection == 4)
+        {
+            //exit;
+            return EXIT_SUCCESS; //not sure why this is used... the internet said to use it so...
+        }
+        else
+        {
+            cout << "Your selection is invalid. Please select a valid number." << endl;
+        }
+    } while (true);
+}
