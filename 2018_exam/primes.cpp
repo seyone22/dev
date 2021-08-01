@@ -9,6 +9,7 @@ int main()
     {
         float input = 0;
         //float increment = 2;
+        //THIS IS AN UPDATE THAT I PUSHED NOW ONTO THE SERVER
 
         cin >> input;
         float increment = input - 1;

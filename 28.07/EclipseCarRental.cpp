@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -12,7 +13,10 @@ int main()
         int miles, setOne, setTwo, price;
         cout << "Welcome to the Eclipse Car Rental Company dues calculator!\nTo get started, please enter the total mileage.\n";
         getline(cin, str);
-        miles = stoi(str); //inputting a non-numeric character will throw an error.
+
+        stringstream(str) >> miles;
+
+        //miles = stoi(str); //inputting a non-numeric character will throw an error.
         //cin >> miles;
         if (checkV == "Y" || checkV == "y")
         {
