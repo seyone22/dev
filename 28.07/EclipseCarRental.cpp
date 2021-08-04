@@ -43,6 +43,8 @@ int main()
         cout << "The amount due is - Rs." << price << endl;
         cout << "Would you like to check another value? (Y/N)" << endl;
         //cin >> check; // have to figure out error handling if spaces or unexpected data is inputted
+
+        //it somehow works.
         getline(cin, checkV);
     } while (checkV == "Y" || checkV == "y");
 }
