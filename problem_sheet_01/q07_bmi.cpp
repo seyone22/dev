@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int height, weight;
+    float height, weight;
     cout << "This program will calculate your BMI.\nEnter a your height below (in cm)\n";
     cin >> height;
     cout << "Enter your weight (in kg)\n";
