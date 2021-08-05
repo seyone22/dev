@@ -30,7 +30,11 @@ int main()
     {
         for (int count = 6; count > i; count--)
         {
-            cout << "'";
+            cout << " ";
+        }
+        for (int count = 0; count < i; count++)
+        {
+            cout << "*";
         }
         for (int count = 0; count < i; count++)
         {
