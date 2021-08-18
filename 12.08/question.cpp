@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    double input = 0, factorial = 0;
+    double input = 0, factorial;
     do
     {
         factorial = 1;  
