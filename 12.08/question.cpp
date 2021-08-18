@@ -8,7 +8,7 @@ int main()
     double input = 0, factorial = 0;
     do
     {
-        factorial = 1;
+        factorial = 1;  
         cout << "Enter a number\n";
         cin >> input;
         if (input < 0)
