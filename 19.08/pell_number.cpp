@@ -10,7 +10,6 @@ int main()
 
     for (int i = 2; i <= 25; i++)
     {
-        pell[i] = 1;
         pell[i] = 2 * pell[i - 1] + pell[i - 2];
     }
     for (int i = 0; i < 25; i++)
