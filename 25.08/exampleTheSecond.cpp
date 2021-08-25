@@ -1,3 +1,5 @@
+//Author: S.G.Seyone (2019/ICT/46)
+
 //This program will read the name, regNo, and age from the student.
 //If the age is invalid, the program will ask for a valid age
 //Valid ages are between 0 and 100.c
