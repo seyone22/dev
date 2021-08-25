@@ -14,7 +14,7 @@ int main()
         {
             cout << "Enter your number:\n";
             cin >> number;
-            runningTotal = runningTotal + number;
+            runningTotal+=number;
             cout << "Do you want to enter more numbers? (Y/N)";
             cin >> input;
         } while (input == "y" || input == "Y");
