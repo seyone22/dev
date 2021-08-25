@@ -1,5 +1,6 @@
 //This program will sum up the numbers you enter.
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
