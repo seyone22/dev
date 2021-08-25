@@ -11,31 +11,31 @@ int main()
     int age;
     cout << "Please enter your personal details in the prompt below..\n";
 
-    cout << "Please enter your name (eg. John Smith)";
+    cout << "Please enter your name (eg. John Smith)\n";
     cin >> fName >> lName;
     do
     {
         if (age < 0)
         {
-            cout << "Your age cannot be less than 0.";
+            cout << "Your age cannot be less than 0.\n";
         } else
         if (age > 100)
         {
-            cout << "Are you sure you're over 100 years old?";
+            cout << "Are you sure you're over 100 years old?\n";
         }
         
         
-        cout << "Please enter your age";
+        cout << "Please enter your age\n";
         cin >> age;
     } while (age < 0 || age > 100 );
 
-    cout << "Please enter your registration number/n";
+    cout << "Please enter your registration number\n";
     cin >> regNo;
 
     cout << "Your details are as follows\n"
-         << "Name :\t" << fName << " " << lName
-         << "Age :\t" << age
-         << "Registration Number :\t" << regNo;
+         << "Name :\t\t\t" << fName << " " << lName << endl
+         << "Age :\t\t\t" << age << endl
+         << "Registration Number :\t" << regNo << endl;
 
     system("pause");
     return 0;
