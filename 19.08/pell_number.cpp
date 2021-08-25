@@ -16,4 +16,5 @@ int main()
     {
         cout << pell[i] << endl;
     }
+    return 0;
 }
