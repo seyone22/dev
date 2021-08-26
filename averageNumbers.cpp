@@ -29,7 +29,7 @@ int main()
                 cout << "The average of all positive numbers enteres so far is is " << average << endl;
             }
         } while (looper == 0);
-        cout << "Do you want to do another count? (Y/N)";
+        cout << "Do you want to do another count? (Y/N)\n";
         cin >> tester;
     } while (tester == "Y" || tester == "y");
     return 0;
