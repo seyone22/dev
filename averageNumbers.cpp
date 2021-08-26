@@ -31,6 +31,6 @@ int main()
         } while (looper == 0);
         cout << "Do you want to do another count? (Y/N)";
         cin >> tester;
-    } while (tester == "T" || tester == "t");
+    } while (tester == "Y" || tester == "y");
     return 0;
 }
