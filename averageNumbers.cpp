@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int input, runningTotal, looper = 0, average, i = 0;
+    double input, runningTotal, looper = 0, average, i = 0;
     string tester;
     do
     {
