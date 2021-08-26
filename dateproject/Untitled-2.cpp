@@ -11,9 +11,12 @@ int main()
         cout << &a << endl
              << &b << endl;
         test = abs(&a - &b);
-        cout << "Difference is " << test << endl;
-        cout << *(&a - test) << endl;
-        cout << *(&a + test) << endl;
+
+        cout << &a - 0x1;
+        cout << test;
+        //cout << "Difference is " << test << endl;
+        //cout << *(&a - test) << endl;
+        //cout << *(&a + test) << endl;
         cout << "Size of a is " << sizeof(a) << endl;
 
 }
