@@ -26,7 +26,7 @@ int main()
             {
                 looper = 1;
                 average = runningTotal / i;
-                cout << "The average of all positive numbers enteres so far is is " << average << endl;
+                cout << "The average of all positive numbers entered so far is is " << average << endl;
             }
         } while (looper == 0);
         cout << "Do you want to do another count? (Y/N)\n";
