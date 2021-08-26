@@ -7,16 +7,15 @@ using namespace std;
 
 int main()
 {
-        int a = 10, b = 20, test;
-        cout << &a << endl
-             << &b << endl;
-        test = abs(&a - &b);
+    int a = 10, b = 20, test;
+    int **p;
+    cout << &a << endl
+         << &b << endl;
+    test = abs(&a - &b);
 
-        cout << &a - 0x1;
-        cout << test;
-        //cout << "Difference is " << test << endl;
-        //cout << *(&a - test) << endl;
-        //cout << *(&a + test) << endl;
-        cout << "Size of a is " << sizeof(a) << endl;
-
+    cout << &a - 0x1 << endl;
+    cout << "Size of a is " << sizeof(a) << endl;
+    *p = &a;
+    cout << *p << endl;
+    cout << **p << endl;
 }
