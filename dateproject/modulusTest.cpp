@@ -17,7 +17,7 @@ int main()
         cout << k;
     } while (true);*/
 
-    int a, b;
+    int a, b; 
     do
     {
         cin >> a;
