@@ -23,10 +23,23 @@ int main()
 
     int otherArray[counter];
 
-    for (int j = counter; j > 0; j--)
+    /*for (int j = counter; j > 0; j--)
     {
         otherArray[counter - j] = numbers[j - 1];
+    }*/
+
+    //snippet to right rotate an array. Basically it shifts everything over by one to the right, and it overflows to the 0th index.
+
+    for (int j = 0; j < counter; j++)
+    {
+        if (j + 1 == counter)
+        {
+            otherArray[0] = numbers[j];
+            break;
+        }
+        otherArray[j + 1] = numbers[j];
     }
+
     cout << "output\n";
     for (int k = 0; k < counter; k++)
     {
