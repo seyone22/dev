@@ -1,6 +1,6 @@
 //Author: S.G.Seyone (2019/ICT/46)
 
-//write a program to copy all the elements of one array to another array
+//write a program to copy all the elements of one array to another array (reverse order mod)
 
 #include <iostream>
 
@@ -22,10 +22,12 @@ int main()
     } while (i < counter);
 
     int otherArray[counter];
-    for (int j = 0; j < counter; j++)
+
+    for (int j = counter; j > 0; j--)
     {
-        otherArray[j] = numbers[j];
+        otherArray[counter - j] = numbers[j - 1];
     }
+    cout << "output\n";
     for (int k = 0; k < counter; k++)
     {
         cout << otherArray[k] << endl;
