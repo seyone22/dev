@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    cout << "This program will calculate the the sum of given numbers. To start, enter how many numbers you want to sum up\n";
+    cout << "This program will calculate the minimum and maximum of give numbers";
     int inputNumbers[10]{23, 45, 7, 68, 90, 56, 34, 76, 89, 18};
     int minimum = 0, maximum = 0, tempVal = 0;
     //snippet to find the maximum
