@@ -18,8 +18,7 @@ int main()
     //gets the lengths of first and second name parts to memory
     for (int i = 0; i < arrayLength; i++)
     {
-        temp = fullName[i];
-        if (temp==' ')
+        if (fullName[i]==' ')
         {
             break;
         }
