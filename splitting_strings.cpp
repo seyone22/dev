@@ -1,6 +1,6 @@
 //Author: S.G.Seyone (2019/ICT/46)
 
-//This program will left rotate any given array.
+//This program split two terms in a string
 
 #include <iostream>
 
