@@ -15,6 +15,15 @@ int main()
     int firstLength = 0; //secondLength not necesesary for two terms
     char temp;
 
+
+    for (int i = 0; i < arrayLength; i++)
+    {
+        cout << fullName[i];
+    }
+    cout << endl;
+    
+
+
     //gets the lengths of first and second name parts to memory
     for (int i = 0; i < arrayLength; i++)
     {
