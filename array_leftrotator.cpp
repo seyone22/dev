@@ -25,6 +25,7 @@ int main()
 
 //snippet to right rotate an array. Basically it shifts everything over by one to the left, and it overflows to the nth index.
     for (int j = 0; j < counter - 1; j++) //-1 because otherwise, it will overwrite the last index with numbers[5], which doesn't exist.
+    //This is because the if statement executes at the beginning of the for loop, while in the right rotator it executes at the end (j == counter)
     {
         if (j == 0)
         {
