@@ -11,7 +11,7 @@ int main()
     char fullName[] = "Seyone Gunasingham";
 
     //try to get length of array using magic
-    int arrayLength = sizeof(fullName) - 1; //it gives 19 where 18 is length of string... weird. Just reduce one for calculation's sake.
+    int arrayLength = sizeof(fullName); //it gives 19 where 18 is length of string... weird. Just reduce one for calculation's sake.
     int firstLength = 0; //secondLength not necesesary for two terms
     char temp;
 
@@ -19,6 +19,7 @@ int main()
     for (int i = 0; i < arrayLength; i++)
     {
         cout << fullName[i];
+        cout << i << endl;
     }
     cout << endl;
     
