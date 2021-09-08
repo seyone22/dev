@@ -1,6 +1,7 @@
 //Author: S.G.Seyone (2019/ICT/46)
 
 //write a program to copy all the elements of one array to another array (reverse order mod)
+//program has been modified to right rotate the array.
 
 #include <iostream>
 
@@ -28,8 +29,7 @@ int main()
         otherArray[counter - j] = numbers[j - 1];
     }*/
 
-    //snippet to right rotate an array. Basically it shifts everything over by one to the right, and it overflows to the 0th index.
-
+//snippet to right rotate an array. Basically it shifts everything over by one to the right, and it overflows to the 0th index.
     for (int j = 0; j < counter; j++)
     {
         if (j + 1 == counter)
@@ -40,6 +40,7 @@ int main()
         otherArray[j + 1] = numbers[j];
     }
 
+//snippet to output the array code
     cout << "output\n";
     for (int k = 0; k < counter; k++)
     {
