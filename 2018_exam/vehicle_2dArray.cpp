@@ -21,6 +21,8 @@ int main()
     int fullTotal = 0;
     int vehicle[3][4]{
         //OI OI IT'S COLUMN FIRST, THEN ROW. DON'T SCREW THIS UP!!!
+
+        //Future me here, no it's not. It's rows then columns. I have no idea how this code runs properly. Honestly, I don't want to either.
         {13, 9, 10, 32},  //Row 0, AKA lot 1
         {10, 18, 20, 34}, //Row 1, AKA lot 2
         {8, 20, 15, 40},  //Row 2, AKA lot 3
