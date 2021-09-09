@@ -18,6 +18,16 @@ int sanitizedInputs()
     return output;
 }
 
+//outputs values of a given 1d array
+void arrayOutput(string description, int arrayLength, int array[])
+{
+    cout << description << endl;
+    for (int i = 0; i < arrayLength; i++)
+    {
+        cout << array[i] << endl;
+    }
+}
+
 int main()
 {
     int rows = 0, columns = 0, runningTot = 0, runningMax = 0, runningMin = 0;
@@ -111,38 +121,12 @@ int main()
          << "current min " << runningMin << endl
          << "total of array " << runningTot << endl;
 
-    cout << "Row Totals are" << endl;
-    for (int i = 0; i < rows; i++)
-    {
-        cout << rowTotal[i] << endl;
-    }
-
-    cout << "Column Totals are" << endl;
-    for (int i = 0; i < columns; i++)
-    {
-        cout << columnTotal[i] << endl;
-    }
-
-    cout << "Column Maxes are" << endl;
-    for (int i = 0; i < columns; i++)
-    {
-        cout << columnMax[i] << endl;
-    }
-    cout << "Row Maxes are" << endl;
-    for (int i = 0; i < columns; i++)
-    {
-        cout << rowMax[i] << endl;
-    }
-    cout << "Column Mins are" << endl;
-    for (int i = 0; i < columns; i++)
-    {
-        cout << columnMin[i] << endl;
-    }
-    cout << "Row Mins are" << endl;
-    for (int i = 0; i < columns; i++)
-    {
-        cout << rowMin[i] << endl;
-    }
+    arrayOutput("Row Totals are", rows, rowTotal);
+    arrayOutput("Column Totals are", columns, columnTotal);
+    arrayOutput("Column Maxes are", columns, columnMax);
+    arrayOutput("Row Maxes are", rows, rowMax);
+    arrayOutput("Column Mins are", columns, columnMin);
+    arrayOutput("Row Mins are", rows, rowMin);
 
     return 0;
 }
