@@ -56,7 +56,7 @@ int main()
 
     //code snippet calculations
     //THIS BLOCK IS FOR ROWS
-    /*for (int i = 0; i < rows; i++)
+    for (int i = 0; i < rows; i++)
     {
         rowTotal[i] = 0;
         rowMax[i] = 0;
@@ -84,7 +84,7 @@ int main()
                 tempMin[1] = tableData[i][j];
             }
         }
-    }*/
+    }
 
     //THIS BLOCK IS FOR COLUMNS
     for (int j = 0; j < columns; j++)
@@ -94,24 +94,24 @@ int main()
         columnMin[j] = 0;
 
         //Calculates the Column Totals
-        for (int i = 0; i < rows; i++) //for the ith row, cycle through available columns
+        for (int i = 0; i < rows; i++) //for the ith column, cycle through available rows
         {
-            rowTotal[j] = rowTotal[j] + tableData[i][j];
+            columnTotal[j] = columnTotal[j] + tableData[i][j];
         }
         //Calculates the Column Maximums and Minimums
-        tempMin[0] = rowTotal[j], tempMin[1] = rowTotal[j];
+        tempMin[0] = columnTotal[j], tempMin[1] = columnTotal[j];
         tempMax[0] = 0, tempMax[1] = 0;
 
         for (int i = 0; i < rows; i++)
         {
             if (tableData[i][j] > tempMax[0])
             {
-                columnMax[i] = tableData[i][j];
+                columnMax[j] = tableData[i][j];
                 tempMax[0] = tableData[i][j];
             }
             if (tableData[i][j] < tempMin[0])
             {
-                columnMin[i] = tableData[i][j];
+                columnMin[j] = tableData[i][j];
                 tempMin[0] = tableData[i][j];
             }
         }
