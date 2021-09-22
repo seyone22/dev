@@ -44,7 +44,7 @@ int main()
         }
     }
 
-    //Calcualtes the maximum sales per vehicle type (row)
+    //Calculates the maximum sales per vehicle type (row)
     int tempRowMax = 0, RowMax = 0, brandSum = 0;
     string maxColor;
     cout << "SALES BY BRAND\n";
@@ -58,7 +58,7 @@ int main()
                 tempRowMax = VehicleSales[i][j];
             }
         }
-        cout << "The total amount of " << TableRows[i] << " sold is " << brandSum << endl;
+        cout << "The total amount of " << TableRows[i] << "s sold is " << brandSum << endl;
         brandSum = 0;
         for (int j = 0; j < 5; j++)
         {
@@ -70,5 +70,6 @@ int main()
             }
         }
     }
+    system("pause");
     return 0;
 }

@@ -106,7 +106,7 @@ int main()
         else if (selection == 4)
         {
             //exit;
-            return EXIT_SUCCESS; //not sure why this is used... the internet said to use it so...
+            return EXIT_SUCCESS;
         }
         else
         {
