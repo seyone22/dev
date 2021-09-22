@@ -1,5 +1,5 @@
-//this program has been rewritten to include 2d arrays to store data. Question: Why use 2d arrays over just regular arrays, or even individual variables? Space savings? Calculation time reduction?
-//My guess would be space savings...
+//Author: S.G.Seyone (2019/ICT/46)
+//This program stores and performs calculations on a table of data.
 
 #include <iostream>
 #include <string>
@@ -11,18 +11,9 @@ int main()
     string opt[3]{"The total number of vehicles in each parking lot", "The total number of vehicles of each type", "The total number of vehicles in all the parking lots and of all vehicle types"};
     exitMsg = "\nPlease enter another number to make another selection, or 4 to close the application.\n"; //Finally realized the usefulness of home and end on keyboard. Glad my RK68 will have it!
 
-    /*  int van[3]{13, 10, 8};
-    int car[3]{9, 18, 20};
-    int cab[3]{10, 20, 15};
-    int moBike[3]{32, 34, 40};
-*/
-
-    //declaration of the same data above, but using a 2d matrix array. Apparantly you can make any dimension of arrays... How it works beyond 3 is beyond me... Beyond physics I'd say!
     int fullTotal = 0;
     int vehicle[3][4]{
-        //OI OI IT'S COLUMN FIRST, THEN ROW. DON'T SCREW THIS UP!!!
 
-        //Future me here, no it's not. It's rows then columns. I have no idea how this code runs properly. Honestly, I don't want to either.
         {13, 9, 10, 32},  //Row 0, AKA lot 1
         {10, 18, 20, 34}, //Row 1, AKA lot 2
         {8, 20, 15, 40},  //Row 2, AKA lot 3
