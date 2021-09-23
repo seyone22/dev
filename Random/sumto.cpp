@@ -18,7 +18,7 @@ int sumTo(int valToSum)
     int runningSum = 0;
     for (int i = 0; i <= valToSum; i++)
     {
-        runningSum = runningSum + i;
+        runningSum+=i;
     }
     return runningSum;
 }
