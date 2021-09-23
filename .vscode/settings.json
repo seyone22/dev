@@ -41,5 +41,6 @@
         "typeinfo": "cpp",
         "iterator": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }
