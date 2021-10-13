@@ -13,10 +13,9 @@ string getinput(string description = "No description provided")
 
 int main()
 {
+    int attempts = 0;
     do
     {
-        int attempts = 0;
-
         if (attempts == 3)
         {
             return 0;
