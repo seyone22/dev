@@ -26,7 +26,7 @@ int main()
         string pwdCon = getinput("Please reenter your password");
         if (pwd == pwdCon)
         {
-            if (pwd == "0666")
+            if (pwd == "0666") //set unique password to check.
             {
                 cout << "Access granted. Good day, " << username << "!";
                 break;
