@@ -1,3 +1,6 @@
+//Author: S.G.Seyone
+//Calls an array
+
 #include <iostream>
 using namespace std;
 
