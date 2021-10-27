@@ -1,46 +1,35 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
-
-//gives the color of any banknote depending on the value
-//100 orange, 1000 green, 5000 yellow, 20 purple, 50 blue
+int fib(int n) //3
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        // return ( fib(3) + fib(2))
+        return (fib(n - 1) + fib(n - 2));
+    }
+}
 
 int main()
 {
-    int denomination = 0;
-
-    cout << "Please enter the denomnation of your banknote" << endl << ">>";
-    cin >> denomination;
-
-    switch (denomination)
-    {
-        case 20:
-            cout << "The color is purple";
-            break;
-
-        case 50:
-            cout << "The color is blue";
-            break;
-        
-        case 100:
-            cout << "The oolor is orange";
-            break;
-
-        case 1000:
-            cout << "The color is green";
-            break;
-
-        case 5000:
-            cout << "The color is yellow";
-            break;
-
-        default:
-            cout << "INVALID DENOMINATION ENTERED!";
-            break;
-    }
-
-
-
+start:
+    int x;
+    cout << "Enter a number : ";
+    cin >> x;
+    cout << "Fibonnacci of " << x << " : " << fib(x) << endl; //4
+    cout << endl;
+    goto start;
     return 0;
 }
+
+//0 1 1 2 3 5 8 13...
+
+//5
